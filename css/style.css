@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: deepskyblue;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 10px;
+    z-index: 100;
+    /* Agrega esta línea */
+}
+
+.navbar {
+    display: flex;
+    padding: 22px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar .logo img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.navbar .logo h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar .links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.navbar .links a:hover {
+    color: black;
+}
+
+.navbar .links {
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.navbar .logo h2 {
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 10px 18px;
+}
+
+.textos {
+    background-color: transparent;
+    border-radius: 10%;
+    margin: 140px 50px;
+    /* Agrega un poco de padding para dar espacio al texto */
+}
+
+.textos h1 {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.textos p {
+    color: rgb(0, 0, 0);
+    font-size: small;
+    font-weight: bold;
+}
+
+.Contenido {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    height: 400px;
+    width: 700px;
+}
+
+.wrapper .img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.wrapper .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+    border-top: black;
+    border-radius: 5%;
+}
+
+#uno:checked~.img-1 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#dos:checked~.img-2 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#tres:checked~.img-3 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#cuatro:checked~.img-4 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.wrapper .sliders {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+}
+
+.wrapper .sliders label {
+    height: 13px;
+    width: 13px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 0.3 ease;
+}
+
+#uno:checked~.sliders label.uno,
+#dos:checked~.sliders label.dos,
+#tres:checked~.sliders label.tres,
+#cuatro:checked~.sliders label.cuatro {
+    width: 35px;
+    border-radius: 14px;
+    background-color: rgb(51, 255, 0);
+}
+
+.sliders label:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.wrapper input[type=radio] {
+    display: none;
+}
+
+@media (min-width: 600px) and (max-width: 950px) {
+    /* Agrega estilos aquí */
+}
